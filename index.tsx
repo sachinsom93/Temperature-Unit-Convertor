@@ -60,7 +60,7 @@ export const TemperatureUnitConvertor = () => {
       return;
     }
 
-    if (inputs.firstTemp && inputs.secondUnit && inputs.secondUnit) {
+    if (inputs.secondUnit && inputs.secondUnit) {
       const output = convertTemperature(inputs.firstUnit, inputs.firstTemp, inputs.secondUnit);
       setInputs(prev => ({
         ...prev,
@@ -80,7 +80,7 @@ export const TemperatureUnitConvertor = () => {
       </div>
 
       <div className="flex flex-col flex-nowrap items-center gap-4 my-8">
-        <p className="text-red-600">{error}</p>
+        <p className="text-red-600 min-h-[20px] my-0">{error}</p>
         <div className="max-w-fit min-h-fit rounded-lg py-4">
           <p className="mt-0 text-sm">Entered Temperature</p>
           <div className="flex flex-row flex-nowrap gap-4">
@@ -140,7 +140,7 @@ export const TemperatureUnitConvertor = () => {
           </div>
         </div>
 
-        <Button className="border border-solid" variant={'outline'} type="button" onClick={handleConvert}>Convert</Button>
+        <Button className="border border-solid" variant={'default'} type="button" onClick={handleConvert}>Convert</Button>
       </div>
 
       {/* User Guides */}

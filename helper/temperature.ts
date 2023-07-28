@@ -6,7 +6,7 @@ export enum TemperatureUnit {
 
 export function convertTemperature(
   inputUnit: TemperatureUnit,
-  inputValue: number,
+  inputValue = 0,
   outputUnit: TemperatureUnit
 ): number {
   if (inputUnit === outputUnit) {
